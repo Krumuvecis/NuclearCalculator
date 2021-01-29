@@ -1,8 +1,8 @@
-<h1> Reactor size calculator </h1>
+<h1> Nuclear calculator </h1>
 
 <h2> Description </h2>
 
-A calculator for calculating the size of a nuclear reactor.
+A calculator for calculating nuclear reactions and the size of a reactor.
 
 <h2> Dependencies </h2>
 
