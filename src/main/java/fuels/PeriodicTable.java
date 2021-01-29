@@ -293,125 +293,125 @@ public class PeriodicTable {
         put(79, new Element("Au", "Gold", new HashMap<>(){{
             put(197, null);
         }}));
-        put(80, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(80, new Element("Hg", "Mercury", new HashMap<>(){{
+            put(201, null);
         }}));
-        put(81, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(81, new Element("Tl", "Thallium", new HashMap<>(){{
+            put(204, null);
         }}));
-        put(82, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(82, new Element("Pb", "Lead", new HashMap<>(){{
+            put(207, null);
         }}));
-        put(83, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(83, new Element("Bi", "Bismuth", new HashMap<>(){{
+            put(209, null);
         }}));
-        put(84, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(84, new Element("Po", "Polonium", new HashMap<>(){{
+            put(209, null);
         }}));
-        put(85, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(85, new Element("At", "Astatine", new HashMap<>(){{
+            put(210, null);
         }}));
-        put(86, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(86, new Element("Rn", "Radon", new HashMap<>(){{
+            put(222, null);
         }}));
 
         //Period 7
 
-        put(87, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(87, new Element("Fr", "Francium", new HashMap<>(){{
+            put(223, null);
         }}));
-        put(88, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(88, new Element("Ra", "Radium", new HashMap<>(){{
+            put(226, null);
         }}));
-        put(89, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(89, new Element("Ac", "Actinium", new HashMap<>(){{
+            put(227, null);
         }}));
-        put(90, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(90, new Element("Th", "Thorium", new HashMap<>(){{
+            put(232, null);
         }}));
-        put(91, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(91, new Element("Pa", "Protactinium", new HashMap<>(){{
+            put(231, null);
         }}));
-        put(92, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(92, new Element("U", "Uranium", new HashMap<>(){{
+            put(238, null);
         }}));
-        put(93, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(93, new Element("Np", "Neptunium", new HashMap<>(){{
+            put(237, null);
         }}));
-        put(94, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(94, new Element("Pu", "Plutonium", new HashMap<>(){{
+            put(244, null);
         }}));
-        put(95, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(95, new Element("Am", "Americium", new HashMap<>(){{
+            put(243, null);
         }}));
-        put(96, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(96, new Element("Cm", "Curium", new HashMap<>(){{
+            put(247, null);
         }}));
-        put(97, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(97, new Element("Bk", "Berkelium", new HashMap<>(){{
+            put(247, null);
         }}));
-        put(98, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(98, new Element("Cf", "Californium", new HashMap<>(){{
+            put(251, null);
         }}));
-        put(99, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(99, new Element("Es", "Einsteinium", new HashMap<>(){{
+            put(252, null);
         }}));
-        put(100, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(100, new Element("Fm", "Fermium", new HashMap<>(){{
+            put(257, null);
         }}));
-        put(101, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(101, new Element("Md", "Mendelevium", new HashMap<>(){{
+            put(258, null);
         }}));
-        put(102, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(102, new Element("No", "Nobelium", new HashMap<>(){{
+            put(259, null);
         }}));
-        put(103, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(103, new Element("Lr", "Lawrencium", new HashMap<>(){{
+            put(266, null);
         }}));
-        put(104, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(104, new Element("Rf", "Rutherfordium", new HashMap<>(){{
+            put(267, null);
         }}));
-        put(105, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(105, new Element("Db", "Dubnium", new HashMap<>(){{
+            put(268, null);
         }}));
-        put(106, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(106, new Element("Sg", "Seaborgium", new HashMap<>(){{
+            put(269, null);
         }}));
-        put(107, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(107, new Element("Bh", "Bohrium", new HashMap<>(){{
+            put(270, null);
         }}));
-        put(108, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(108, new Element("Hs", "Hassium", new HashMap<>(){{
+            put(270, null);
         }}));
-        put(109, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(109, new Element("Mt", "Meitnerium", new HashMap<>(){{
+            put(278, null);
         }}));
-        put(110, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(110, new Element("Ds", "Darmstadtium", new HashMap<>(){{
+            put(281, null);
         }}));
-        put(111, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(111, new Element("Rg", "Roentgenium", new HashMap<>(){{
+            put(282, null);
         }}));
-        put(112, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(112, new Element("Cn", "Copernicum", new HashMap<>(){{
+            put(285, null);
         }}));
-        put(113, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(113, new Element("Nh", "Nihonium", new HashMap<>(){{
+            put(286, null);
         }}));
-        put(114, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(114, new Element("Fl", "Flerovium", new HashMap<>(){{
+            put(289, null);
         }}));
-        put(115, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(115, new Element("Mc", "Moscovium", new HashMap<>(){{
+            put(290, null);
         }}));
-        put(116, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(116, new Element("Lv", "Livermorium", new HashMap<>(){{
+            put(293, null);
         }}));
-        put(117, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(117, new Element("Ts", "Tennessine", new HashMap<>(){{
+            put(294, null);
         }}));
-        put(118, new Element("", "", new HashMap<>(){{
-            put(0, null);
+        put(118, new Element("Og", "Oganesson", new HashMap<>(){{
+            put(294, null);
         }}));
 
         // Period 8 - hypothetical
