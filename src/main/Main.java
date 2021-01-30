@@ -1,6 +1,8 @@
+package main;
+
 public class Main {
 
-    static int variable = 1;
+    public static int variable = 1;
 
     //this is the main class
 
