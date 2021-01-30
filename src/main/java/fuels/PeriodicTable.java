@@ -1,7 +1,6 @@
 package fuels;
 
-import java.util.Map;
-import java.util.HashMap;
+import java.util.*;
 
 public class PeriodicTable {
 
@@ -20,39 +19,263 @@ public class PeriodicTable {
     }
 
     public static class Isotope{
-        public double mass;
-        public double halfLife;
-        public Map<Decay.DecayMode, Double> decayModeDistribution;
+        public Double mass;
+        public Double halfLife;
+        public List<Decay.DecayType> decayModeList;
 
         Isotope(Double _mass,
                 Double _halfLife,
-                Map<Decay.DecayMode, Double> _decayModeDistribution){
+                List<Decay.DecayType> _decayModeList){
 
             mass = _mass;
             halfLife = _halfLife;
-            decayModeDistribution = _decayModeDistribution;
+            decayModeList = _decayModeList;
         }
     }
+
+    static final int secondsInHour = 3600;
+    static final int secondsInDay = 24 * secondsInHour;
+    static final int secondsInYear = 365 * secondsInDay;
 
     public static final Map<Integer, Element> periodicTable = new HashMap<>(){{
         // Period 1
 
         put(1, new Element("H", "Hydrogen", new HashMap<>(){{
-            put(1, null);
-            put(2, null);
-            put(3, null);
+            put(1, new Isotope(1.00782503224, null, null));
+            put(2, new Isotope(2.01410177811, null, null));
+            put(3, new Isotope(3.01604928199, 12.32 * secondsInYear, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                }}));
+            }}));
+            put(4, new Isotope(4.02643, 1.39e-22, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.NeutronEmission);
+                }}));
+            }}));
+            put(5, new Isotope(5.03531, 9.1e-22, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.NeutronEmission);
+                    add(Decay.DecayMode.NeutronEmission);
+                }}));
+            }}));
+            put(6, new Isotope(6.04496, 2.90e-22, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.NeutronEmission);
+                    add(Decay.DecayMode.NeutronEmission);
+                    add(Decay.DecayMode.NeutronEmission);
+                }}));
+            }}));
+            put(7, new Isotope(7.05275, 2.3e-23, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.NeutronEmission);
+                    add(Decay.DecayMode.NeutronEmission);
+                    add(Decay.DecayMode.NeutronEmission);
+                    add(Decay.DecayMode.NeutronEmission);
+                }}));
+            }}));
         }}));
         put(2, new Element("He", "Helium", new HashMap<>(){{
-            put(4, null);
+            put(2, new Isotope(2.015894, 10e-9, new ArrayList<>(){{
+                add(new Decay.DecayType(0.9999, new ArrayList<>(){{
+                    add(Decay.DecayMode.ProtonEmission);
+                }}));
+                add(new Decay.DecayType(0.0001, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaPlus);
+                }}));
+            }}));
+            put(3, new Isotope(3.01602932265, null, null));
+            put(4, new Isotope(4.00260325413, null, null));
+            put(5, new Isotope(5.012057, 700e-24, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.NeutronEmission);
+                }}));
+            }}));
+            put(6, new Isotope(6.01888589, 806.92e-3, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                }}));
+            }}));
+            put(7, new Isotope(7.027991, 2.51e-21, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.NeutronEmission);
+                }}));
+            }}));
+            put(8, new Isotope(8.03393439, 119.1e-3, new ArrayList<>(){{
+                add(new Decay.DecayType(0.83, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                }}));
+                add(new Decay.DecayType(0.161, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                    add(Decay.DecayMode.NeutronEmission);
+                }}));
+                add(new Decay.DecayType(0.009, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                    add(Decay.DecayMode.Fission);
+                }}));
+            }}));
+            put(9, new Isotope(9.04395, 2.5e-21, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.NeutronEmission);
+                }}));
+            }}));
+            put(10, new Isotope(10.05282, 3.1e-21, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.NeutronEmission);
+                    add(Decay.DecayMode.NeutronEmission);
+                }}));
+            }}));
         }}));
 
         // Period 2
 
         put(3, new Element("Li", "Lithium", new HashMap<>(){{
-            put(7, null);
+            put(4, new Isotope(4.02719, 91e-24, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.ProtonEmission);
+                }}));
+            }}));
+            put(5, new Isotope(5.01254, 370e-24, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.ProtonEmission);
+                }}));
+            }}));
+            put(6, new Isotope(6.0151228874, null, null));
+            put(7, new Isotope(7.016003437, null, null));
+            put(8, new Isotope(8.02248625, 839.40e-3, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                }}));
+            }}));
+            put(9, new Isotope(9.02679019, 178.3e-3, new ArrayList<>(){{
+                add(new Decay.DecayType(0.508, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                    add(Decay.DecayMode.NeutronEmission);
+                }}));
+                add(new Decay.DecayType(0.492, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                }}));
+            }}));
+            put(10, new Isotope(10.035483, 2.0e-21, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.NeutronEmission);
+                }}));
+            }}));
+            put(11, new Isotope(11.0437236, 8.75e-3, new ArrayList<>(){{
+                add(new Decay.DecayType(0.863, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                    add(Decay.DecayMode.NeutronEmission);
+                }}));
+                add(new Decay.DecayType(0.05978, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                }}));
+                add(new Decay.DecayType(0.041, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                    add(Decay.DecayMode.NeutronEmission);
+                    add(Decay.DecayMode.NeutronEmission);
+                }}));
+                add(new Decay.DecayType(0.019, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                    add(Decay.DecayMode.NeutronEmission);
+                    add(Decay.DecayMode.NeutronEmission);
+                    add(Decay.DecayMode.NeutronEmission);
+                }}));
+                add(new Decay.DecayType(0.017, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                    add(Decay.DecayMode.Alpha);
+                }}));
+                add(new Decay.DecayType(0.00013, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                    add(Decay.DecayMode.Fission);
+                }}));
+                add(new Decay.DecayType(0.000009, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                    add(Decay.DecayMode.Fission);
+                }}));
+            }}));
+            put(12, new Isotope(12.05261, 10e-9, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.NeutronEmission);
+                }}));
+            }}));
+            put(13, new Isotope(13.06117, 3.3e-21, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.NeutronEmission);
+                    add(Decay.DecayMode.NeutronEmission);
+                }}));
+            }}));
         }}));
         put(4, new Element("Be", "Beryllium", new HashMap<>(){{
-            put(9, null);
+            put(6, new Isotope(6.019726, 5.0e-21, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.ProtonEmission);
+                    add(Decay.DecayMode.ProtonEmission);
+                }}));
+            }}));
+            put(7, new Isotope(7.01692872, 53.22 * secondsInDay, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaPlus);
+                }}));
+            }}));
+            put(8, new Isotope(8.00530510, 8.19e-17, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.Alpha);
+                }}));
+            }}));
+            put(9, new Isotope(9.01218307, null, null));
+            put(10, new Isotope(10.01353470, 1.51e+6 * secondsInYear, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                }}));
+            }}));
+            put(11, new Isotope(11.02166108, 13.76, new ArrayList<>(){{
+                add(new Decay.DecayType(0.971, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                }}));
+                add(new Decay.DecayType(0.029, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                    add(Decay.DecayMode.Alpha);
+                }}));
+            }}));
+            put(12, new Isotope(12.0269221, 21.50e-3, new ArrayList<>(){{
+                add(new Decay.DecayType(0.995, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                }}));
+                add(new Decay.DecayType(0.005, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                    add(Decay.DecayMode.NeutronEmission);
+                }}));
+            }}));
+            put(13, new Isotope(13.036135, 1.0e-21, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.NeutronEmission);
+                }}));
+            }}));
+            put(14, new Isotope(14.04289, 4.35e-3, new ArrayList<>(){{
+                add(new Decay.DecayType(0.98, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                    add(Decay.DecayMode.NeutronEmission);
+                }}));
+                add(new Decay.DecayType(0.012, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                }}));
+                add(new Decay.DecayType(0.008, new ArrayList<>(){{
+                    add(Decay.DecayMode.BetaMinus);
+                    add(Decay.DecayMode.NeutronEmission);
+                    add(Decay.DecayMode.NeutronEmission);
+                }}));
+            }}));
+            put(15, new Isotope(15.05349, 7.9e-22, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.NeutronEmission);
+                }}));
+            }}));
+            put(16, new Isotope(16.06167, 6.5e-22, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.NeutronEmission);
+                    add(Decay.DecayMode.NeutronEmission);
+                }}));
+            }}));
         }}));
         put(5, new Element("B", "Boron", new HashMap<>(){{
             put(11, null);
@@ -415,6 +638,14 @@ public class PeriodicTable {
         }}));
 
         // Period 8 - hypothetical
+
+        /*put(0, new Element("", "", new HashMap<>(){{
+            put(0,  new Isotope(null, null, new ArrayList<>(){{
+                add(new Decay.DecayType(1.0, new ArrayList<>(){{
+                    add(Decay.DecayMode.Fission);
+                }}));
+            }}));
+        }}));*/
 
     }};
 
