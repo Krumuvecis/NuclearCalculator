@@ -1,6 +1,7 @@
 import main.Main;
-import periodicTable.FuelDatabase;
-import periodicTable.FuelPrepopulator;
+import periodicTable.oldIdeas.FuelDatabase;
+import periodicTable.oldIdeas.FuelPrepopulator;
+
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 

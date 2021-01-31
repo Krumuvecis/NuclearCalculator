@@ -1,4 +1,4 @@
-package periodicTable;
+package periodicTable.oldIdeas;
 
 import java.util.*;
 

@@ -40,7 +40,7 @@ set /a element=%element%%plus%%one%
 goto elementCheck
 
 :end
-echo true>%managerDir%\setupStatus
+rem echo true>%managerDir%\setupStatus
 cls
 echo Setup complete.
 echo %maxelement% elements generated.
