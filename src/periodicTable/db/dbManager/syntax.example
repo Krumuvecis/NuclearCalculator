@@ -1,0 +1,61 @@
+# Comments:
+Any plain text lines are treated as comments.
+Sections can have specific effect on plain text lines (see below).
+# Specifically commented lines must begin with "#". Space may be used for readibility but is not necessary.
+# It is possible to comment entire lines only.
+
+Blank lines are not counted; are treated as comments, which are also not counted.
+
+
+
+# Declaring parameters:
+parameterName:parameterValue
+
+# Indentation is not supported. See wrong example below:
+ parameter:value
+# Parameter name would be read as " parameter".
+
+# Brackets are not supported. See wrong example below:
+(parameter:value)
+# Parameter name would be read as "(parameter" and value as "value)".
+
+
+
+# Sections:
+# Sections are plain text lines that exactly match any possible section name value.
+thisIsASection
+# Possible section types are hard-coded as needed.
+
+
+
+# Example:
+
+This is a syntax example.
+name:my name
+# someValue:123
+someValue:456
+This is just some text, which will be treated as a comment.
+
+sectionType1
+parameter1:abc
+parameter2:123e+6
+
+sectionType1
+parameter1:def
+parameter2:456e+6
+
+sectionType2
+If section "sectionType2" is defined as
+containing plain text,
+then the following lines will be treated as
+the value until a new section starts.
+# This line is a comment.
+Value for this section continues as
+
+new section has not yet started.
+# Empty lines are still ignored.
+
+sectionType1
+This section breaks the plain text input and returns to comments.
+parameter1:ghi
+parameter2:789e+6

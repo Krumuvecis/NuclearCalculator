@@ -7,10 +7,14 @@ title Element Generator - Element %2
 cls
 echo Element generator - element %2
 echo.
+set elementSymbol=empty
 set /p elementSymbol=Element symbol: 
+if %elementSymbol% == empty goto start
+set elementName=empty
 set /p elementName=Element name: 
+if %elementName% == empty goto start
 echo.
-goto create
+goto createElement
 
 :createElement
 echo Creating element %element% directory and main parameters...
@@ -18,9 +22,9 @@ if not exist %element%\ mkdir %element%
 cd %element%
 start /w ..\%managerDir%\elementalDataGenerator.bat %elementSymbol% %elementName%
 echo.
-goto createIsotope
+goto createIsotopes
 
-:createIsotope
+:createIsotopes
 echo Creating isotopes ...
 if not exist isotopes\ mkdir isotopes
 cd isotopes

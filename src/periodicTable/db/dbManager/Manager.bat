@@ -2,8 +2,6 @@
 set titleName=Periodic Table Manager
 title %titleName%
 set managerDir=dbManager
-set plus=+
-set one=1
 cd ..\
 
 :start
@@ -21,7 +19,7 @@ echo 1 - first time setup (%setupStatusOutput%)
 echo 2 - edit values
 echo x - exit
 echo.
-set modeChoice=
+set modeChoice= 
 set /p modeChoice=Select operational mode: 
 if %modeChoice% == 1 goto firstSetup
 if %modeChoice% == 2 goto valueEdit
@@ -36,7 +34,8 @@ goto start
 
 :valueEdit
 echo.
-echo This functionality is not working yet.
+echo Warning: This functionality is not implemented yet.
+echo Currently changes can only be made manually.
 echo.
 pause
 goto start

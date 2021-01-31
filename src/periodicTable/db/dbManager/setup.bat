@@ -1,6 +1,8 @@
 @echo off
 title Periodic Table Manager - First time setup
 set managerDir=%1
+set plus=+
+set one=1
 
 :start
 cls
