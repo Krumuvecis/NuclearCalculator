@@ -1,4 +1,4 @@
-package fuels;
+package periodicTable;
 
 import java.util.HashMap;
 import java.util.List;
