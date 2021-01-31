@@ -27,9 +27,10 @@ set mass=empty
 set /p mass=Mass: 
 if %mass% == empty goto isotopeParameters
 set halfLife=empty
-set /p halfLife=HalfLife: (x if stable) 
+set /p halfLife=HalfLife: (x if stable, 0 if unknown) 
 if %halfLife% == empty goto isotopeParameters
 if %halfLife% == x goto generateIsotope
+if %halfLife% == 0 goto generateIsotope
 set halfLifeUnits= 
 set /p halfLifeUnits=HalfLife measurement units: (s/min/h/d/w/mon/y) 
 set unitSet=false
@@ -46,12 +47,17 @@ goto isotopeParameters
 :generateIsotope
 echo mass:%mass%>%isotope%
 if %halfLife% == x goto stableIsotope
+if %halfLife% == 0 goto unknownDecay
 echo halfLife:%halfLife%>>%isotope%
 echo halfLifeUnits:%halfLifeUnits%>>%isotope%
 goto decayModesPrepare
 
 :stableIsotope
 echo halfLife:stable>>%isotope%
+goto compareIsotope
+
+:unknownDecay
+echo halfLife:unknown>>%isotope%
 goto compareIsotope
 
 :decayModesPrepare
